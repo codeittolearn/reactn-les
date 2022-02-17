@@ -1,20 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,SafeAreaView,TextInput,TouchableOpacity } from 'react-native';
+import Constants from 'expo-constants';
+import React from 'react';
+import Loginmomo from './components/loginmomo';
+import Loginfb from './components/loginfacebook';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+
+export default class App extends React.Component {
+  render() {
+    return (
+       <Loginfb/>
+    );
+  }
+}
+
+const TEXT={
+
+  color:"#fff",
+  textAlign:"center",
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#b0006d',
+
+
   },
+
 });
