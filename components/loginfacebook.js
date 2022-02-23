@@ -9,13 +9,15 @@ import imgback from "../assets/anhyeuem.jpg"
 export default function Loginfb() {
   return (
     <View style={styles.container}>
-        <StatusBar style="dark"/>
-            <View style={styles.imgview}>
-            <Image style={styles.img} source={imgback}/>
-            </View>
+        <StatusBar style="dask"/>
+
+      
 
         <View style={styles.content}>
-
+           
+        <Image style={styles.img} source={imgback}/>
+           
+           
             <TextInput style={styles.inputuser}
                 placeholder="Số điện thoại hoặc email"
                 placeholderTextColor="#cdcdcf"
@@ -29,7 +31,7 @@ export default function Loginfb() {
             <TouchableOpacity style={styles.buttonlogin}>
                 <Text style={styles.txt}>Đăng nhập</Text>
             </TouchableOpacity>
-        </View>
+       
 
         <View style={styles.action} >
       <TouchableOpacity style={styles.buttonaction}>
@@ -40,16 +42,22 @@ export default function Loginfb() {
         <Text style={styles.txtaction}>Quay lại</Text>
 
       </TouchableOpacity>
-
-        <View style={styles.content}>
-
-
-      <TouchableOpacity style={styles.buttonregis}>
-                <Text style={styles.txtregis}>tao tai khoan</Text>
+        </View>
+        </View>
+      
+        <View style={styles.contentreg}>
+          <View style={{flexDirection:"row",alignItems:"center",marginBottom:10,}}>
+              <View style={{borderWidth:1, borderColor:"#000", width:150,height:1,opacity:0.1}}></View>
+          
+            <Text style={styles.labelreg}>HOẶC</Text>
+              <View style={{borderWidth:1, borderColor:"#000", width:150,height:1,opacity:0.1}}></View>
+          </View>
+            <TouchableOpacity style={styles.buttonregis}>
+            <Text style={styles.txtregis}>Tạo tài khoản mới</Text>
             </TouchableOpacity>
-
-    </View>
-    </View>
+          
+        </View>
+     
    </View>
 
   );
@@ -67,8 +75,19 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#fff',
+    justifyContent:"space-between",
+    
 
+  },
+  labelreg:{
+    textAlign: "center",
+    width:50,
+  },
+  contentreg:{
 
+    alignItems: "center",
+    
+   
 
   },
   buttonaction:{
@@ -82,6 +101,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     alignItems:"center",
     borderRadius:5,
+    marginBottom:10,
 
   },
   txtaction:{
@@ -91,9 +111,9 @@ const styles = StyleSheet.create({
       color :"#1977F3",
   },
   content:{
+       
       alignItems:"center",
-      marginTop:16,
-      justifyContent:"center",
+     
 
   },
   inputuser:{
@@ -118,9 +138,12 @@ const styles = StyleSheet.create({
       alignItems:"center",
   },
   img:{
-    width:400,
-    height:230,
-    marginBottom:16,
+    width:450,
+    height:300,
+       
+       resizeMode:"contain",
+      
+    // marginBottom:16,
 
   },
   txt:{
